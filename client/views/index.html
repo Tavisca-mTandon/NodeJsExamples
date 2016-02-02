@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MeanJsPoc</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width" initial-scale="1">
+    </head>
+    <body>
+        <div ng-controller="listController">
+            <h1>Hi There are {{demoList.length}} items in your list.</h1>
+            <ul>
+                <li ng-repeat="items in demoList" style="background-color:#efefef;padding:10px;width:200px;">
+                    {{items.name}}
+                </li>
+            </ul>
+            <form ng-submit="addName()">
+            <input type="text" placeholder="Enter Name Here" ng-model="name"></input>
+            <button type="submit">Add Name</button>
+            </form>
+        </div>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-resource.js"></script>
+        <script type="text/javascript" src="/js/app.js"></script>
+        <script type="text/javascript" src="/js/controllers/list-controller.js"></script>
+    </body>
+
+</html>
